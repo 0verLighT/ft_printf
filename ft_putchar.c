@@ -1,6 +1,22 @@
-#include "include/ft_prinft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amartel <amartel@student.42angouleme.fr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/29 22:47:51 by amartel           #+#    #+#             */
+/*   Updated: 2025/10/30 17:36:08 by amartel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	ft_putchar(char c)
+#include "ft_printf.h"
+
+int	ft_putchar(void *c)
 {
-    write(1, &c, 1);
+	char *i;
+
+	i = (char *)c;
+    write(1, i, 1);
+	return (0);
 }
