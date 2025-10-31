@@ -19,13 +19,13 @@
 typedef struct s_function
 {
 	char c;
-	int (*f)(void *);
+	int (*f)(va_list*);
 }	t_function;
 
-int	ft_putchar(void *c);
-int	ft_putstr(void *s);
-int		ft_printf(const char *format, ...);
-void	ft_putnbr(int nb);
+int	ft_putchar(va_list *ap);
+int	ft_putstr(va_list *ap);
+int	ft_printf(const char *format, ...);
+int	ft_putnbr(va_list *ap);
 void	ft_putunbr(unsigned int nb);
 void	ft_puthex(int nb);
 
