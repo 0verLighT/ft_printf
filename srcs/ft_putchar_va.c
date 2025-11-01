@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amartel <amartel@student.42angouleme.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 22:48:03 by amartel           #+#    #+#             */
-/*   Updated: 2025/10/30 17:31:15 by amartel          ###   ########.fr       */
+/*   Created: 2025/10/29 22:47:51 by amartel           #+#    #+#             */
+/*   Updated: 2025/10/30 17:36:08 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
-int    ft_putstr(va_list *ap)
+int	ft_putchar_va(va_list *ap)
 {
-	char *str;
-	int len;
+	char c;
 
-	len = 0;
-	str = (char *)va_arg(*ap, char *);
-    while (str[len])
-    {
-        write(1, &str[len++], 1);
-    }
-	return (len);
+	c = (char)va_arg(*ap, int);
+	write(1, &c, 1);
+	return (1);
 }
