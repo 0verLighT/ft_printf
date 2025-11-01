@@ -3,3 +3,4 @@ a.out
 main.c
 compile_commands.json
 .idea
+libftprintf.a

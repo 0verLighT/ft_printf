@@ -6,11 +6,13 @@ BUILD_DIR = build/
 
 OBJ= $(subst $(SRC_DIR),$(BUILD_DIR),$(SRCS:.c=.o))
 
-SRC_DIR = ./
+SRC_DIR = srcs/
 
 SRCS = \
+	$(SRC_DIR)ft_putchar_va.c \
+	$(SRC_DIR)ft_putstr_va.c \
+	$(SRC_DIR)ft_putnbr_va.c \
 	$(SRC_DIR)ft_putchar.c \
-	$(SRC_DIR)ft_putstr.c \
 	$(SRC_DIR)ft_putnbr.c \
 	$(SRC_DIR)ft_printf.c
 
