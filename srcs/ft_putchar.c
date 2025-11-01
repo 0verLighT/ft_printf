@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amartel <amartel@student.42angouleme.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 23:03:49 by amartel           #+#    #+#             */
-/*   Updated: 2025/10/29 23:04:43 by amartel          ###   ########.fr       */
+/*   Created: 2025/10/31 20:58:00 by amartel           #+#    #+#             */
+/*   Updated: 2025/11/01 00:00:26 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF
-#define FT_PRINTF
+#include "../includes/ft_utils.h"
 
-#include <unistd.h>
-#include <stdarg.h>
 
-typedef struct s_function
+int	ft_putchar(char c)
 {
-	char c;
-	int (*f)(va_list*);
-}	t_function;
-
-int	ft_putchar(va_list *ap);
-int	ft_putstr(va_list *ap);
-int	ft_printf(const char *format, ...);
-int	ft_putnbr(va_list *ap);
-void	ft_putunbr(unsigned int nb);
-void	ft_puthex(int nb);
-
-#endif
+	return (write(1, &c, 1));
+}

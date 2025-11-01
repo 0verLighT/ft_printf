@@ -6,27 +6,20 @@
 /*   By: amartel <amartel@student.42angouleme.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 22:48:36 by amartel           #+#    #+#             */
-/*   Updated: 2025/10/31 15:24:43 by alexandre        ###   ########.fr       */
+/*   Updated: 2025/11/01 00:44:19 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "includes/ft_printf.h"
 
 static int	ft_flag(const char *s, va_list *ap)
 {
-	int	i;
-	int	len;
+	int					i;
+	int					len;
+	const t_function	flag[] = {{'c', ft_putchar_va},{'s', ft_putstr_va},{'i', ft_putnbr_va},{'d', ft_putnbr_va},{0, NULL}};
 
 	i = 0;
 	len = 0;
-	const t_function	flag[] = {
-		{'c', ft_putchar},
-		{'s', ft_putstr},
-		{'i', ft_putnbr},
-		{'d', ft_putnbr},
-		{0, NULL}
-	};
-
 	while (flag[i].c)
 	{
 		if (flag[i].c == s[1])
@@ -41,9 +34,9 @@ static int	ft_flag(const char *s, va_list *ap)
 
 int	ft_printf(const char *format, ...)
 {
-	va_list ap;
-	int	len;
-	int	i;
+	va_list	ap;
+	int		len;
+	int		i;
 
 	len = 0;
 	i = 0;
