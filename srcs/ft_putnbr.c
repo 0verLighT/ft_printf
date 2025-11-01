@@ -6,7 +6,7 @@
 /*   By: amartel <amartel@student.42angouleme.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 00:10:08 by amartel           #+#    #+#             */
-/*   Updated: 2025/11/01 00:28:48 by amartel          ###   ########.fr       */
+/*   Updated: 2025/11/02 00:15:48 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int	ft_putnbr(int nb)
 
 	len = 0;
 	ln = nb;
-	if (nb < 0) {
+	if (nb < 0)
+	{
 		len = 1;
 		ft_putchar('-');
 		ln = -ln;

@@ -6,12 +6,11 @@
 /*   By: amartel <amartel@student.42angouleme.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 20:58:00 by amartel           #+#    #+#             */
-/*   Updated: 2025/11/01 00:00:26 by amartel          ###   ########.fr       */
+/*   Updated: 2025/11/02 00:14:15 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_utils.h"
-
 
 int	ft_putchar(char c)
 {

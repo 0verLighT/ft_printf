@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amartel <amartel@student.42angouleme.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 22:48:03 by amartel           #+#    #+#             */
-/*   Updated: 2025/11/02 00:16:26 by amartel          ###   ########.fr       */
+/*   Created: 2025/11/02 00:38:31 by amartel           #+#    #+#             */
+/*   Updated: 2025/11/02 00:49:06 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "includes/ft_utils.h"
 
-int	ft_putstr_va(va_list *ap)
+int ft_putnbr_unsigned(unsigned int n)
 {
-	char	*str;
-	int		len;
-
-	len = 0;
-	str = va_arg(*ap, char *);
-	while (str[len])
-		write(1, &str[len++], 1);
-	return (len);
+	if (n >= 10)
+		ft_putnbr_unsigned(n / 10);
+	ft_putchar(n % 10 + '0');
+	return (0);
 }

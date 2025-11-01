@@ -14,7 +14,9 @@ SRCS = \
 	$(SRC_DIR)ft_putnbr_va.c \
 	$(SRC_DIR)ft_putchar.c \
 	$(SRC_DIR)ft_putnbr.c \
-	$(SRC_DIR)ft_printf.c
+	$(SRC_DIR)ft_printf.c \
+	$(SRC_DIR)ft_putnbr_unsigned_va.c \
+	$(SRC_DIR)ft_putnbr_unsigned.c
 
 INCLUDE = -Iincludes
 
