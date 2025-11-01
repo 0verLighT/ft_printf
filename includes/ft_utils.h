@@ -14,6 +14,7 @@
 #define FT_UTILS_H
 
 #include <unistd.h>
+#include <stdlib.h>
 
 int	ft_putchar(char c);
 int	ft_putnbr(int nb);

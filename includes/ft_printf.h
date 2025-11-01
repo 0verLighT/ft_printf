@@ -15,18 +15,18 @@
 
 #include <unistd.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 typedef struct s_function
 {
 	char c;
 	int (*f)(va_list*);
+	struct s_function	*next;
 }	t_function;
 
 int	ft_putchar_va(va_list *ap);
 int	ft_putstr_va(va_list *ap);
 int	ft_printf(const char *format, ...);
 int	ft_putnbr_va(va_list *ap);
-void	ft_putunbr(unsigned int nb);
-void	ft_puthex(int nb);
 
 #endif
