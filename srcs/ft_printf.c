@@ -6,18 +6,21 @@
 /*   By: amartel <amartel@student.42angouleme.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 22:48:36 by amartel           #+#    #+#             */
-/*   Updated: 2025/11/02 00:42:05 by amartel          ###   ########.fr       */
+/*   Updated: 2025/11/02 01:08:18 by amartel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "../includes/ft_printf.h"
 
 static int	ft_flag(const char *s, va_list *ap)
 {
-	int					i;
-	int					len;
-	const t_function	flag[] = {{'c', ft_putchar_va},
-	{'s', ft_putstr_va}, {'i', ft_putnbr_va}, {'d', ft_putnbr_va}, {'u', ft_putnbr_unsigned_va} , {0, NULL}};
+	int						i;
+	int						len;
+	const char			*string[] = {"%s", "%c", "%%", "%p"};
+	const char			*nbr[] = {"%d", "%i", "%hd", "%ld", "%lld", "%x", "%X"};
+	const char			*unbr[] = {"%u", "%o", "%hu", "%lu", "%llo", "%llu"};
+	const char			*fnbr[] = {"%f", "%e", "%E", "g", "%a", "%Lf"};
+	const char			flags[] = {'-', '0', '.', '#', ' ', '+'};
 
 	i = 0;
 	len = 0;
