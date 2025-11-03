@@ -28,6 +28,6 @@ int	ft_putchar_va(va_list *ap);
 int	ft_putstr_va(va_list *ap);
 int	ft_printf(const char *format, ...);
 int	ft_putnbr_va(va_list *ap);
-int	ft_putnbr_unsigned_va(va_list *ap);
+int	ft_putunbr_va(va_list *ap);
 
 #endif
