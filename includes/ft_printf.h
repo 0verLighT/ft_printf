@@ -23,15 +23,17 @@ typedef struct s_function
 }	t_function;
 
 int	ft_putchar_va(va_list *ap);
-int ft_putchar(int c);
+int	ft_putchar(int c);
 int	ft_putstr_va(va_list *ap);
 int	ft_printf(const char *format, ...);
 int	ft_putnbr_va(va_list *ap);
 int	ft_putunbr_va(va_list *ap);
-int ft_puthex_va(va_list *ap, char spec);
-int ft_putaddr_va(va_list *ap);
-int ft_putunbr_base(unsigned int n, char *base);
-int ft_strlen(const char *s);
+int	ft_puthex_va(va_list *ap, char spec);
+int	ft_putaddr_va(va_list *ap);
+int	ft_putunbr_base(unsigned int n, char *base);
+int	ft_strlen(const char *s);
 int	ft_putnbr_base(int nb, char *base);
+int	ft_putchar_base(int nb, char *base);
+int ft_putunbr_long_base(unsigned long n, char *base);
 
 #endif

@@ -20,7 +20,9 @@ SRCS = \
 	$(SRC_DIR)ft_putunbr_base.c \
 	$(SRC_DIR)ft_putaddr_va.c \
 	$(SRC_DIR)ft_strlen.c \
-	$(SRC_DIR)ft_putunbr_va.c
+	$(SRC_DIR)ft_putunbr_va.c \
+	$(SRC_DIR)ft_putunbr_long_base.c \
+	$(SRC_DIR)ft_putchar_base.c
 
 INCLUDE = -Iincludes
 

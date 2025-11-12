@@ -12,11 +12,6 @@
 
 #include "ft_printf.h"
 
-static int  ft_putchar_base(int nb, char *base)
-{
-	return (write(1, &base[nb], 1));
-}
-
 int ft_putunbr_base(unsigned int n, char *base)
 {
 	unsigned int    base_size;

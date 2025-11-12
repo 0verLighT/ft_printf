@@ -12,11 +12,6 @@
 
 #include "../includes/ft_printf.h"
 
-static int	ft_putchar_base(int nb, char *base)
-{
-	return (write(1, &base[nb], 1));
-}
-
 int	ft_putnbr_base(int nb, char *base)
 {
 	int	base_size;

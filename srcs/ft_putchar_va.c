@@ -14,9 +14,9 @@
 
 int	ft_putchar_va(va_list *ap)
 {
-	char	c;
+	int	c;
 
-	c = (char)va_arg(*ap, int);
+	c = va_arg(*ap, int);
 	write(1, &c, 1);
 	return (1);
 }

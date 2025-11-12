@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putaddr_va.c                                    :+:      :+:    :+:   */
+/*   ft_putchar_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexandre <alexandre@student.1337.ma>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/12 01:28:04 by alexandre         #+#    #+#             */
-/*   Updated: 2025/11/12 02:58:55 by alexandre        ###   ########.fr       */
+/*   Created: 2025/11/12 03:18:45 by alexandre         #+#    #+#             */
+/*   Updated: 2025/11/12 03:18:47 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	ft_putaddr_va(va_list *ap)
+int  ft_putchar_base(int nb, char *base)
 {
-	unsigned long	ptr;
-	int				len;
-
-	len = 0;
-	ptr = va_arg(*ap, unsigned long);
-	if (ptr == 0)
-		return (write(2, "(nil)", 5));
-	len += write(1, "0x", 2);
-	len += ft_putunbr_long_base(ptr, "0123456789abcdef");
-	return (len);
+	return (write(1, &base[nb], 1));
 }
