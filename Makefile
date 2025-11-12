@@ -13,10 +13,14 @@ SRCS = \
 	$(SRC_DIR)ft_putstr_va.c \
 	$(SRC_DIR)ft_putnbr_va.c \
 	$(SRC_DIR)ft_putchar.c \
-	$(SRC_DIR)ft_putnbr.c \
 	$(SRC_DIR)ft_printf.c \
-	$(SRC_DIR)ft_putnbr_unsigned_va.c \
-	$(SRC_DIR)ft_putnbr_unsigned.c
+	$(SRC_DIR)ft_putnbr_base.c \
+	$(SRC_DIR)ft_putaddr_va.c \
+	$(SRC_DIR)ft_puthex_va.c \
+	$(SRC_DIR)ft_putunbr_base.c \
+	$(SRC_DIR)ft_putaddr_va.c \
+	$(SRC_DIR)ft_strlen.c \
+	$(SRC_DIR)ft_putunbr_va.c
 
 INCLUDE = -Iincludes
 

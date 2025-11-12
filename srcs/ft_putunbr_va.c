@@ -11,19 +11,11 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
-#include "../includes/ft_utils.h"
 
-static int ft_putunbr(unsigned int nb)
-{
-	if (nb >= 10)
-		ft_putunbr(nb / 10);
-	ft_putchar(nb % 10 + '0');
-	return (0);
-}
 int	ft_putunbr_va(va_list *ap)
 {
 	unsigned int	nb;
 
 	nb = va_arg(*ap, unsigned int);
-	return (ft_putunbr(nb));
+	return (ft_putunbr_base(nb, "01234567689"));
 }

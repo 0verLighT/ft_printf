@@ -6,7 +6,7 @@
 /*   By: amartel <amartel@student.42angouleme.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 23:03:49 by amartel           #+#    #+#             */
-/*   Updated: 2025/11/02 00:27:11 by amartel          ###   ########.fr       */
+/*   Updated: 2025/11/12 03:03:32 by alexandre        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,23 @@
 
 #include <unistd.h>
 #include <stdarg.h>
-#include <stdlib.h>
 
 typedef struct s_function
 {
 	char c;
 	int (*f)(va_list*);
-//	struct s_function	*next;
 }	t_function;
 
 int	ft_putchar_va(va_list *ap);
+int ft_putchar(int c);
 int	ft_putstr_va(va_list *ap);
 int	ft_printf(const char *format, ...);
 int	ft_putnbr_va(va_list *ap);
 int	ft_putunbr_va(va_list *ap);
+int ft_puthex_va(va_list *ap, char spec);
+int ft_putaddr_va(va_list *ap);
+int ft_putunbr_base(unsigned int n, char *base);
+int ft_strlen(const char *s);
+int	ft_putnbr_base(int nb, char *base);
 
 #endif

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_utils.h"
+#include "../includes/ft_printf.h"
 
 int	ft_strlen(const char *s)
 {
